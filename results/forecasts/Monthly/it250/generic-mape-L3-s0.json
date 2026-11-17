@@ -1,0 +1,20 @@
+{
+  "freq": "Monthly",
+  "arch": "generic",
+  "loss": "mape",
+  "lookback": 3,
+  "seed": 0,
+  "iterations": 2000,
+  "batch_size": 1024,
+  "lr": 0.001,
+  "lr_decay": true,
+  "grad_clip": 1.0,
+  "checkpoints": [
+    250,
+    500,
+    1000
+  ],
+  "saved_at": 250,
+  "seconds": 65.6,
+  "device": "mps"
+}

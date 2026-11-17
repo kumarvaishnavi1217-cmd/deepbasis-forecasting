@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "deepbasis"
+version = "0.1.0"
+description = "DeepBasis: interpretable neural forecasting on the 100,000-series M4 benchmark"
+requires-python = ">=3.10"
+dependencies = ["torch>=2.2", "numpy>=1.26", "pandas>=2.0", "matplotlib>=3.8", "tqdm"]
+
+[project.optional-dependencies]
+baselines = ["statsforecast>=1.7"]
+dev = ["pytest>=8", "ruff>=0.5"]
+
+[project.scripts]
+deepbasis = "deepbasis.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["deepbasis*"]
+
+[tool.ruff]
+line-length = 120
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
